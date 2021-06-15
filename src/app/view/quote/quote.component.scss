@@ -1,0 +1,40 @@
+div.container-center {
+  height: 100%;
+  display: flex;
+  margin: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+h1.quote-text {
+  font-family: 'Sacramento', cursive;
+  font-size: xxx-large;
+}
+
+h3.author {
+  font-size: x-large;
+  margin: 0px 0px 0px 10px;
+}
+
+img.circle-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+div.column {
+  flex-direction: column;
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+div.button-container{
+  display: flex;
+  justify-content: center;
+  width: 80px;
+}
