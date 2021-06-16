@@ -3,5 +3,5 @@
 
   // Environment variables
   window["env"]["baseUrl"] = "http://localhost:7000";
-  window["env"]["apiKey"] = "API_KEY";
+  window["env"]["apiKey"] = "APIKEY";
 })(this);
