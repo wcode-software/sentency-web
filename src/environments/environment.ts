@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://sentency.tk/server",
-  apiKey: "eShVmYq3t6w9zTB&"
+  baseUrl: (window as any)["env"]["baseUrl"] || "http://localhost:7000",
+  apiKey: (window as any)["env"]["apiKey"] || "APIKEY"
 };
 
 /*

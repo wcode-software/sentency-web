@@ -20,7 +20,6 @@ export class QuoteComponent implements OnInit {
 
   getRandomQuote(): void {
     this.quoteService.getDailyQuote().subscribe((quote) => {
-        console.log(quote)
         this.randomQuote = quote
       }
     )

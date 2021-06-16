@@ -2,11 +2,11 @@
   "name": "sentency-web",
   "version": "0.0.1",
   "scripts": {
-    "ng": "sentency-web/node_modules/.bin/ng",
-    "start": "sentency-web/node_modules/.bin/ng serve",
-    "build": "sentency-web/node_modules/.bin/ng build",
-    "watch": "sentency-web/node_modules/.bin/ng build --watch --configuration development",
-    "test": "sentency-web/node_modules/.bin/ng test"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {

@@ -14,7 +14,7 @@ export class NetworkInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const apiReq = request.clone(
       {
-        url: `${this.baseUrl}/${request.url}`,
+        url: `${this.baseUrl}${request.url}`,
         headers: request.headers.set("apiKey", this.apiKey)
       });
     return next.handle(apiReq);
