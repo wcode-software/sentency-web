@@ -20,5 +20,5 @@ jobs:
         with:
           push: true
           tags: |
-            docker.pkg.github.com/${{ github.repository }}/sentency-dashboard:${{ github.sha }}
-            docker.pkg.github.com/${{ github.repository }}/sentency-dashboard:${{ github.event.release.tag_name }}
+            docker.pkg.github.com/${{ github.repository }}/sentency-web:${{ github.sha }}
+            docker.pkg.github.com/${{ github.repository }}/sentency-web:${{ github.event.release.tag_name }}
