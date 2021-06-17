@@ -1,14 +1,16 @@
 <div class="container-center">
-  <div class="column">
-    <h1 class="quote-text">
-      {{randomQuote?.message || "Loading ..."}}
-    </h1>
-    <div class="row">
-      <img class="circle-img" src="{{randomQuote?.author?.picUrl || 'assets/images/profile.png' }}"
-           alt="Photo of author">
-      <h3 class="author">{{randomQuote?.author?.name || "Unknow"}}</h3>
+  <div class="column" >
+    <div [@fadeInOut]="randomQuote" *ngIf="randomQuote !== undefined">
+      <h1 class="quote-text">
+        {{randomQuote?.message || "Loading ..."}}
+      </h1>
+      <div class="row">
+        <img class="circle-img" src="{{randomQuote?.author?.picUrl || 'assets/images/profile.png' }}"
+             alt="Photo of author">
+        <h3 class="author">{{randomQuote?.author?.name || "Unknow"}}</h3>
+      </div>
     </div>
-    <div class="row" style="margin-top: 90px">
+    <div class="row margin-button">
       <div class="button-container">
         <button mat-fab color="primary" (click)="getRandomQuote()">
           <mat-icon>arrow_forward</mat-icon>

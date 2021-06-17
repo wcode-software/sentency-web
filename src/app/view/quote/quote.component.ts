@@ -1,11 +1,23 @@
 import {Component, OnInit} from '@angular/core';
 import {QuoteService} from "../../services/quote.service";
 import {Quote} from "../../models/Quote";
+import {animate, style, transition, trigger} from "@angular/animations";
+
+export const fadeInOutTimeout = 1000;
+export const fadeInOut = trigger('fadeInOut', [
+  transition('void => *', [style({ opacity: '0' }), animate(fadeInOutTimeout)]),
+  transition('* => void', [animate(fadeInOutTimeout, style({ opacity: '0' }))]),
+  transition('* => *', [
+    style({ opacity: '0' }),
+    animate(fadeInOutTimeout, style({ opacity: '1' })),
+  ]),
+]);
 
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.scss']
+  styleUrls: ['./quote.component.scss'],
+  animations: [fadeInOut]
 })
 export class QuoteComponent implements OnInit {
 

@@ -1,21 +1,35 @@
+@import "../../styles/screen_size";
+
 div.container-center {
   height: 100%;
   display: flex;
   margin: 50px;
   align-items: center;
   justify-content: center;
+
+  @include mobile-only{
+    margin: 30px;
+  }
 }
 
 h1.quote-text {
   font-family: 'Sacramento', cursive;
-  font-size: xxx-large;
+  font-size: 45px;
   text-align: center;
   line-height: 1.2;
+
+  @include mobile-only {
+    font-size: 35px;
+  }
 }
 
 h3.author {
-  font-size: large;
+  font-size: 15px;
   margin: 0px 0px 0px 10px;
+
+  @include mobile-only {
+    font-size: 13px;
+  }
 }
 
 img.circle-img {
@@ -35,8 +49,15 @@ div.row {
   justify-content: center;
 }
 
-div.button-container{
+div.button-container {
   display: flex;
   justify-content: center;
   width: 80px;
+}
+
+div.margin-button {
+  margin-top: 90px;
+  @include mobile-only {
+    margin-top: 40px;
+  }
 }
