@@ -5,11 +5,11 @@ import {animate, style, transition, trigger} from "@angular/animations";
 
 export const fadeInOutTimeout = 1000;
 export const fadeInOut = trigger('fadeInOut', [
-  transition('void => *', [style({ opacity: '0' }), animate(fadeInOutTimeout)]),
-  transition('* => void', [animate(fadeInOutTimeout, style({ opacity: '0' }))]),
+  transition('void => *', [style({opacity: '0'}), animate(fadeInOutTimeout)]),
+  transition('* => void', [animate(fadeInOutTimeout, style({opacity: '0'}))]),
   transition('* => *', [
-    style({ opacity: '0' }),
-    animate(fadeInOutTimeout, style({ opacity: '1' })),
+    style({opacity: '0'}),
+    animate(fadeInOutTimeout, style({opacity: '1'})),
   ]),
 ]);
 
@@ -22,6 +22,7 @@ export const fadeInOut = trigger('fadeInOut', [
 export class QuoteComponent implements OnInit {
 
   randomQuote?: Quote = undefined;
+  messsage: string = "Loading ..."
 
   constructor(private quoteService: QuoteService) {
   }
@@ -33,6 +34,7 @@ export class QuoteComponent implements OnInit {
   getRandomQuote(): void {
     this.quoteService.getDailyQuote().subscribe((quote) => {
         this.randomQuote = quote
+        this.messsage = quote.messages[0].message
       }
     )
   }

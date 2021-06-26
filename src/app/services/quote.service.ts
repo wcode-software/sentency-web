@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Inject, Injectable, LOCALE_ID} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Quote} from "../models/Quote";
@@ -8,11 +8,12 @@ import {Quote} from "../models/Quote";
 })
 export class QuoteService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, @Inject(LOCALE_ID) public locale: string) {
   }
 
   getDailyQuote(): Observable<Quote> {
-    const url = `/quote/random`;
+    console.log(this.locale)
+    const url = `/quote/random?language=${this.locale}`;
     return this.http.get<Quote>(url)
   }
 }
