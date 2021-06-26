@@ -13,6 +13,12 @@
           "strict": true
         }
       },
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "pt": "src/locale/messages.pt.xlf"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,6 +29,8 @@
             "outputPath": "dist/sentency-web",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "localize": true,
+            "aot": true,
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -58,13 +66,17 @@
               ],
               "outputHashing": "all"
             },
+            "pt": {
+              "localize": ["pt"]
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -77,6 +89,9 @@
             },
             "development": {
               "browserTarget": "sentency-web:build:development"
+            },
+            "pt": {
+              "browserTarget": "sentency-web:build:pt"
             }
           },
           "defaultConfiguration": "development"

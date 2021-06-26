@@ -2,7 +2,7 @@
   <div class="column" >
     <div [@fadeInOut]="randomQuote" *ngIf="randomQuote !== undefined">
       <h1 class="quote-text">
-        {{randomQuote?.message || "Loading ..."}}
+        {{messsage}}
       </h1>
       <div class="row">
         <img class="circle-img" src="{{randomQuote?.author?.picUrl || 'assets/images/profile.png' }}"
