@@ -11,11 +11,19 @@ import {NetworkInterceptor} from "./interceptors/NetworkInterceptor";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatDialogModule} from "@angular/material/dialog";
+import {SuggestionModalComponent} from './view/suggestion-modal/suggestion-modal.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuoteComponent
+    QuoteComponent,
+    SuggestionModalComponent
   ],
   imports: [
     BrowserModule,
@@ -24,14 +32,21 @@ import {MatButtonModule} from "@angular/material/button";
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [
     {provide: "BASE_URL", useValue: environment.baseUrl},
     {provide: "API_KEY", useValue: environment.apiKey},
     {provide: HTTP_INTERCEPTORS, useClass: NetworkInterceptor, multi: true},
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SuggestionModalComponent]
 })
 export class AppModule {
 }

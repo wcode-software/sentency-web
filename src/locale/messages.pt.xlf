@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="pt-BR" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="quote_view_suggest" datatype="html">
+        <source>Suggest change</source>
+        <target>Sugerir mudança</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view/quote/quote.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="suggestion_modal_title" datatype="html">
+        <source>Suggest change for quote</source>
+        <target>Sugerir nova frase</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="suggestion_modal_original" datatype="html">
+        <source>Original value:</source>
+        <target>Original:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="suggestion_modal_quote_input" datatype="html">
+        <source>Enter quote suggestion</source>
+        <target>Digitar sugestão</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="suggestion_modal_cancel" datatype="html">
+        <source>Cancel</source>
+        <target>Cancelar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="suggestion_modal_suggest" datatype="html">
+        <source>Suggest</source>
+        <target>Sugerir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

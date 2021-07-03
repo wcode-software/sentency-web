@@ -1,5 +1,14 @@
 <div class="container-center">
-  <div class="column" >
+  <div class="container-over">
+    <button mat-icon-button
+            color="primary"
+            i18n-matTooltip="@@quote_view_suggest" matTooltip="Suggest change"
+            aria-label="Button to suggest a new change into quote"
+            (click)="openDialog()">
+      <mat-icon>border_color</mat-icon>
+    </button>
+  </div>
+  <div class="column">
     <div [@fadeInOut]="randomQuote" *ngIf="randomQuote !== undefined">
       <h1 class="quote-text">
         {{messsage}}
@@ -19,3 +28,4 @@
     </div>
   </div>
 </div>
+

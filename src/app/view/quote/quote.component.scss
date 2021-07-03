@@ -3,13 +3,9 @@
 div.container-center {
   height: 100%;
   display: flex;
-  margin: 50px;
   align-items: center;
   justify-content: center;
-
-  @include mobile-only{
-    margin: 30px;
-  }
+  position: relative;
 }
 
 h1.quote-text {
@@ -40,6 +36,11 @@ img.circle-img {
 
 div.column {
   flex-direction: column;
+  padding: 50px;
+
+  @include mobile-only {
+    padding: 30px;
+  }
 }
 
 div.row {
@@ -60,4 +61,16 @@ div.margin-button {
   @include mobile-only {
     margin-top: 40px;
   }
+}
+
+div.container-over {
+  height: 95%;
+  display: flex;
+  z-index: 0;
+  justify-content: flex-end;
+  position: absolute;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  width: 95%;
 }

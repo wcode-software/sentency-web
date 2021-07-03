@@ -2,42 +2,42 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="quote_view_suggest" datatype="html">
+      <trans-unit id="6277398055360566113" datatype="html">
         <source>Suggest change</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/view/quote/quote.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="suggestion_modal_title" datatype="html">
+      <trans-unit id="5889445919312823936" datatype="html">
         <source>Suggest change for quote</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="suggestion_modal_original" datatype="html">
-        <source>Original value:</source>
+      <trans-unit id="8844075773629448833" datatype="html">
+        <source> Original value:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="suggestion_modal_quote_input" datatype="html">
+      <trans-unit id="6981953433990110893" datatype="html">
         <source>Enter quote suggestion</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="suggestion_modal_cancel" datatype="html">
+      <trans-unit id="2159130950882492111" datatype="html">
         <source>Cancel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="suggestion_modal_suggest" datatype="html">
+      <trans-unit id="5320136382998259826" datatype="html">
         <source>Suggest</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/view/suggestion-modal/suggestion-modal.component.html</context>

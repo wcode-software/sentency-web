@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit(form)">
+  <h2 mat-dialog-title i18n="@@suggestion_modal_title">Suggest change for quote</h2>
+  <p>
+    <span i18n="@@suggestion_modal_original">Original value:</span>
+    <br>
+    <span class="original-quote">{{originalMessage}}</span>
+  </p>
+  <br>
+  <mat-dialog-content>
+    <mat-form-field style="width: 100%">
+      <textarea matInput formControlName="message" rows="5" class="full-width"
+                i18n-placeholder="@@suggestion_modal_quote_input" placeholder="Enter quote suggestion"></textarea>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="button" mat-dialog-close (click)="close()" i18n="@@suggestion_modal_cancel">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" i18n="@@suggestion_modal_suggest">Suggest</button>
+  </mat-dialog-actions>
+</form>
