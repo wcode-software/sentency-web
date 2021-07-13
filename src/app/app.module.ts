@@ -18,6 +18,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from "ng-recaptcha";
 
 @NgModule({
   declarations: [
@@ -38,12 +39,14 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatSnackBarModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    RecaptchaV3Module
   ],
   providers: [
     {provide: "BASE_URL", useValue: environment.baseUrl},
     {provide: "API_KEY", useValue: environment.apiKey},
     {provide: HTTP_INTERCEPTORS, useClass: NetworkInterceptor, multi: true},
+    {provide: RECAPTCHA_V3_SITE_KEY, useValue: environment.recaptchaKey}
   ],
   bootstrap: [AppComponent],
   entryComponents: [SuggestionModalComponent]

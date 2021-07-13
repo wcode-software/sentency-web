@@ -21,3 +21,13 @@ To deploy the project first is necessary to build the Docker image. Use the comm
 ```bash
 docker build -t sentency-web .
 ```
+
+## Environment variables
+
+The project load environment variables to fill some important parameters on the server.
+They can be defined when running the docker image, on the docker-compose or in the environment
+itself.
+
+* ENV_BASE_URL: If it is production or development. Production flavor will try to use Postgre
+* ENV_API_KEY: Value that will be used to wrap all calls.
+* ENV_SITE_KEY: ReCaptcha site key used when getting the token

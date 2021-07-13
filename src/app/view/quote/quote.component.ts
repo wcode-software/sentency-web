@@ -80,11 +80,17 @@ export class QuoteComponent implements OnInit {
     if (localization) {
       localization.message = message
       this.quoteService.suggestQuote(localization).subscribe((response) => {
-        this.snackBar.open(this.localizationService.language.snackMessage, undefined, {
-          duration: 1000
-        })
+        if (response.success) {
+          this.showSuccessSnackbar()
+        }
       })
     }
+  }
+
+  private showSuccessSnackbar(){
+    this.snackBar.open(this.localizationService.language.snackMessage, undefined, {
+      duration: 1000
+    })
   }
 
 }
