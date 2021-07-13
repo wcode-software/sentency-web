@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Quote} from "../models/Quote";
 import {QuoteLocalization} from "../models/QuoteLocalization";
+import {GenericResponse} from "../models/GenericResponse";
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,13 @@ export class QuoteService {
     return this.http.get<Quote>(url)
   }
 
-  suggestQuote(quoteLocalization: QuoteLocalization): Observable<Response> {
+  suggestQuote(quoteLocalization: QuoteLocalization): Observable<GenericResponse> {
     const url = `/queue/language`
-    return this.http.post<Response>(url, quoteLocalization)
+    return this.http.post<GenericResponse>(url, quoteLocalization)
+  }
+
+  checkRecaptcha(token: string, action: string): Observable<GenericResponse> {
+    const url = `/external/google/reCaptcha`
+    return this.http.post<GenericResponse>(url, {"token": token, "action": action})
   }
 }
