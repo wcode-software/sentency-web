@@ -53,14 +53,12 @@ export class SuggestionModalComponent implements OnInit {
     const action = "suggestChange"
     this.recaptchaV3Service.execute(action).subscribe((token) => {
       this.quoteService.checkRecaptcha(token, action).subscribe((response) => {
-        // if (response.success) {
-        //   const result = {message: form.value.message} as DialogResults
-        //   this.dialogRef.close(result);
-        // } else {
-        //   this.showErrorSnackbar()
-        // }
-        this.showErrorSnackbar()
-
+        if (response.success) {
+          const result = {message: form.value.message} as DialogResults
+          this.dialogRef.close(result);
+        } else {
+          this.showErrorSnackbar()
+        }
       })
     })
   }
