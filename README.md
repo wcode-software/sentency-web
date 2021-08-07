@@ -12,7 +12,7 @@ with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
 The list of all the third party frameworks used in this project:
 
 * [Angular Material](https://material.angular.io/): Material Design components for Angular
-
+* [Sentry](https://sentry.io/welcome/): From error tracking to performance monitoring, developers can see what actually matters,
 
 ## Docker image
 
@@ -24,9 +24,8 @@ docker build -t sentency-web .
 
 ## Environment variables
 
-The project load environment variables to fill some important parameters on the server.
-They can be defined when running the docker image, on the docker-compose or in the environment
-itself.
+The project load environment variables to fill some important parameters on the server. They can be defined when running
+the docker image, on the docker-compose or in the environment itself.
 
 * ENV_BASE_URL: If it is production or development. Production flavor will try to use Postgre
 * ENV_API_KEY: Value that will be used to wrap all calls.
