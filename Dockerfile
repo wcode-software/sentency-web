@@ -13,7 +13,7 @@ RUN npm run build
 
 # Stage 2: Serve app with nginx server
 # Use official nginx image as the base image
-FROM nginx:16-alpine3.14
+FROM nginx:alpine
 
 # Copy the build output to replace the default nginx contents.
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
